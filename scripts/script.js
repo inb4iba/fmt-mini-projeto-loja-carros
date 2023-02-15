@@ -23,6 +23,10 @@ function registerCar(model, brand, km, value, color) {
   console.log("Veículo cadastrado com sucesso!");
 }
 
+function getAllCars() {
+  return cars;
+}
+
 for (let i = 1; i <= 3; i++) {
   registerBrand(`Marca ${i}`);
   registerModel(`Modelo ${i}`, `Marca ${Math.round(i / 2)}`);
@@ -37,4 +41,4 @@ for (let i = 1; i <= 3; i++) {
 
 console.log(carBrands);
 console.log(carModels);
-console.log(cars);
+console.log(getAllCars());
