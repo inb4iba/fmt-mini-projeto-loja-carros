@@ -1,53 +1,21 @@
-const carBrands = [];
-const carModels = [];
-const cars = [
-  {
-    model: "Modelo 1",
-    brand: "Marca 1",
-    km: 15000,
-    value: 45000,
-    color: "preto",
-    image: null,
-  },
-  {
-    model: "Modelo 2",
-    brand: "Marca 1",
-    km: 50000,
-    value: 60000,
-    color: "azul",
-    image: null,
-  },
-  {
-    model: "Modelo 3",
-    brand: "Marca 2",
-    km: 19000,
-    value: 32500,
-    color: "preto",
-    image: null,
-  },
-  {
-    model: "Modelo 4",
-    brand: "Marca 3",
-    km: 22200,
-    value: 22000,
-    color: "vermelho",
-    image: null,
-  },
-];
-
 function registerBrand(brand) {
+  const carBrands = JSON.parse(localStorage.getItem("carBrands")) || [];
   carBrands.push(brand);
   console.log(`Marca ${brand} cadastrada com sucesso!`);
   console.log(carBrands);
+  localStorage.setItem("carBrands", JSON.stringify(carBrands));
 }
 
 function registerModel(model, brand) {
+  const carModels = JSON.parse(localStorage.getItem("carModels")) || [];
   carModels.push({ model, brand });
   console.log(`Modelo ${model} cadastrada com sucesso!`);
   console.log(carModels);
+  localStorage.setItem("carModels", JSON.stringify(carModels));
 }
 
 function registerCar(model, brand, km, value, color) {
+  const cars = JSON.parse(localStorage.getItem("cars")) || [];
   cars.push({
     model,
     brand,
@@ -57,10 +25,11 @@ function registerCar(model, brand, km, value, color) {
   });
   console.log("Veículo cadastrado com sucesso!");
   console.log(cars);
+  localStorage.setItem("cars", JSON.stringify(cars));
 }
 
 function getAllCars() {
-  return cars;
+  return JSON.parse(localStorage.getItem("cars")) || [];
 }
 
 function displayCars() {
