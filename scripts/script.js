@@ -1,6 +1,39 @@
 const carBrands = [];
 const carModels = [];
-const cars = [];
+const cars = [
+  {
+    model: "Modelo 1",
+    brand: "Marca 1",
+    km: 15000,
+    value: 45000,
+    color: "preto",
+    image: null,
+  },
+  {
+    model: "Modelo 2",
+    brand: "Marca 1",
+    km: 50000,
+    value: 60000,
+    color: "azul",
+    image: null,
+  },
+  {
+    model: "Modelo 3",
+    brand: "Marca 2",
+    km: 19000,
+    value: 32500,
+    color: "preto",
+    image: null,
+  },
+  {
+    model: "Modelo 4",
+    brand: "Marca 3",
+    km: 22200,
+    value: 22000,
+    color: "vermelho",
+    image: null,
+  },
+];
 
 function registerBrand(brand) {
   carBrands.push(brand);
@@ -28,6 +61,32 @@ function registerCar(model, brand, km, value, color) {
 
 function getAllCars() {
   return cars;
+}
+
+function displayCars() {
+  const cars = getAllCars();
+
+  for (const car of cars) {
+    document.querySelector(".container").appendChild(createCard(car));
+  }
+}
+
+function createCard(car) {
+  const card = document.createElement("div");
+  card.classList = "card";
+  card.innerHTML = `
+    <img
+      src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=270&q=80"
+      alt=""
+    />
+    <p class="model">${car.model} - <span class="brand">${car.brand}</span></p>
+    <p class="color">${car.color}</p>
+    <div class="flex mt">
+      <p class="km">${car.km}km</p>
+      <p class="value">R$${car.value}</p>
+    </div>
+  `;
+  return card;
 }
 
 // for (let i = 1; i <= 3; i++) {
@@ -74,4 +133,6 @@ window.onload = (e) => {
     default:
       console.log("Sem tag ou tag incorreta");
   }
+
+  displayCars();
 };
