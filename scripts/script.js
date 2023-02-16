@@ -27,18 +27,32 @@ function getAllCars() {
   return cars;
 }
 
-for (let i = 1; i <= 3; i++) {
-  registerBrand(`Marca ${i}`);
-  registerModel(`Modelo ${i}`, `Marca ${Math.round(i / 2)}`);
-  registerCar(
-    `Modelo ${i}`,
-    `Marca ${Math.round(i / 2)}`,
-    20 * i,
-    50000 - i * 10000,
-    "preto"
-  );
-}
+// for (let i = 1; i <= 3; i++) {
+//   registerBrand(`Marca ${i}`);
+//   registerModel(`Modelo ${i}`, `Marca ${Math.round(i / 2)}`);
+//   registerCar(
+//     `Modelo ${i}`,
+//     `Marca ${Math.round(i / 2)}`,
+//     20 * i,
+//     50000 - i * 10000,
+//     "preto"
+//   );
+// }
 
-console.log(carBrands);
-console.log(carModels);
-console.log(getAllCars());
+window.onload = (e) => {
+  const resObj = {};
+  const formTag = document.location.hash.replace("#", "");
+  const formRes = document.location.search
+    .replace("?", "")
+    .split("&")
+    .map((item) => {
+      const splitItem = item.split("=");
+      resObj[splitItem[0]] = splitItem[1];
+    });
+
+  switch (formTag) {
+    case "brand":
+      registerBrand(resObj.brand);
+      break;
+  }
+};
