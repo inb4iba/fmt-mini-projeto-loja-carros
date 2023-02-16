@@ -16,5 +16,24 @@
     </nav>
 
     <h1>VEICULO</h1>
+    <form action="index.html#vehicle">
+      <label for="model">Marca:</label>
+      <select name="model" id="model">
+        <option value="207">207</option>
+        <option value="gol">Gol</option>
+        <option value="corsa">Corsa</option>
+        <option value="vectra">Vectra</option>
+        <option value="hb20">HB20</option>
+      </select>
+      <label for="image">Imagem</label>
+      <input type="file" name="image" id="image" />
+      <label for="color">Cor</label>
+      <input type="text" name="color" id="color" />
+      <label for="km">Km</label>
+      <input type="text" inputmode="numeric" name="km" id="km" />
+      <label for="value">Valor</label>
+      <input type="text" inputmode="numeric" name="value" id="value" />
+      <button type="submit">Cadastrar</button>
+    </form>
   </body>
 </html>
