@@ -5,11 +5,13 @@ const cars = [];
 function registerBrand(brand) {
   carBrands.push(brand);
   console.log(`Marca ${brand} cadastrada com sucesso!`);
+  console.log(carBrands);
 }
 
 function registerModel(model, brand) {
   carModels.push({ model, brand });
   console.log(`Modelo ${model} cadastrada com sucesso!`);
+  console.log(carModels);
 }
 
 function registerCar(model, brand, km, value, color) {
@@ -21,6 +23,7 @@ function registerCar(model, brand, km, value, color) {
     color,
   });
   console.log("Veículo cadastrado com sucesso!");
+  console.log(cars);
 }
 
 function getAllCars() {
@@ -42,7 +45,7 @@ function getAllCars() {
 window.onload = (e) => {
   const resObj = {};
   const formTag = document.location.hash.replace("#", "");
-  const formRes = document.location.search
+  document.location.search
     .replace("?", "")
     .split("&")
     .map((item) => {
@@ -50,9 +53,13 @@ window.onload = (e) => {
       resObj[splitItem[0]] = splitItem[1];
     });
 
+  console.log(resObj);
+
   switch (formTag) {
     case "brand":
       registerBrand(resObj.brand);
       break;
+    case "model":
+      registerModel(resObj.model, resObj.brand);
   }
 };
