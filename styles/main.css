@@ -13,10 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  box-shadow: 0 -4px 8px var(--text-color);
-}
-
 header .wrapper {
   display: flex;
   justify-content: space-between;
