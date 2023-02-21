@@ -25,16 +25,12 @@
 
     <main>
       <div class="wrapper">
-        <form action="index.html#model">
+        <form onsubmit="registerModel()">
           <label for="model">Modelo:</label>
           <input type="text" name="model" id="model" />
           <label for="brand">Marca:</label>
           <select name="brand" id="brand">
-            <option value="peugeot">Peugeot</option>
-            <option value="chevrolet">Chevrolet</option>
-            <option value="ferrari">Ferrari</option>
-            <option value="fiat">Fiat</option>
-            <option value="porsche">Porsche</option>
+            <option selected value="null" disabled>Selecione uma marca</option>
           </select>
           <button type="submit">Cadastrar</button>
         </form>

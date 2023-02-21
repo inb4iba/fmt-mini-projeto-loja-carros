@@ -1,3 +1,6 @@
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => e.preventDefault());
+
 function registerVehicles(model, brand, km, value, color) {
   const cars = JSON.parse(localStorage.getItem("cars")) || [];
   cars.push({
