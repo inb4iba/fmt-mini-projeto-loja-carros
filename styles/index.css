@@ -38,3 +38,10 @@
   object-fit: cover;
   object-position: 100% center;
 }
+
+.caret {
+  margin-top: 85vh;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+}

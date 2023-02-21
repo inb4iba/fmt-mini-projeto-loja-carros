@@ -25,14 +25,10 @@
 
     <main>
       <div class="wrapper">
-        <form action="index.html#vehicle">
-          <label for="model">Marca:</label>
+        <form onsubmit="registerVehicles()">
+          <label for="model">Modelo:</label>
           <select name="model" id="model">
-            <option value="207">207</option>
-            <option value="gol">Gol</option>
-            <option value="corsa">Corsa</option>
-            <option value="vectra">Vectra</option>
-            <option value="hb20">HB20</option>
+            <option value="null">Selecione um modelo</option>
           </select>
           <label for="image">Imagem</label>
           <input type="file" name="image" id="image" />

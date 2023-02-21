@@ -2,10 +2,10 @@ const form = document.querySelector("form");
 form.addEventListener("submit", (e) => e.preventDefault());
 
 function registerBrand() {
-  const carBrands = JSON.parse(localStorage.getItem("carBrands")) || [];
+  const vehicleBrands = JSON.parse(localStorage.getItem("vehicleBrands")) || [];
   const brand = form.querySelector("#brand").value;
   form.querySelector("#brand").value = "";
-  carBrands.push(brand);
+  vehicleBrands.push(brand);
   console.log(`Marca cadastrada com sucesso!`);
-  localStorage.setItem("carBrands", JSON.stringify(carBrands));
+  localStorage.setItem("vehicleBrands", JSON.stringify(vehicleBrands));
 }
