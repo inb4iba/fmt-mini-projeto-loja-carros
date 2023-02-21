@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/registers/brand.css" />
 
     <title>Cadastro de Marca - Loja de veículos</title>
   </head>
@@ -26,7 +25,7 @@
 
     <main>
       <div class="wrapper">
-        <form action="index.html#brand">
+        <form onsubmit="return registerBrand()">
           <div>
             <label for="brand">Marca:</label>
             <input type="text" name="brand" id="brand" />
