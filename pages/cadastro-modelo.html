@@ -4,30 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/style.css" />
+
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+
     <title>Cadastro de Modelo - Loja de veículos</title>
   </head>
   <body>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="cadastro-marca.html">Marca</a>
-      <a href="#">Modelo</a>
-      <a href="cadastro-veiculo.html">Veículo</a>
-    </nav>
+    <header>
+      <div class="wrapper">
+        <h1>MODELO</h1>
+        <nav>
+          <a href="index.html">Início</a>
+          <a href="cadastro-marca.html">Marca</a>
+          <a href="#">Modelo</a>
+          <a href="cadastro-veiculo.html">Veículo</a>
+        </nav>
+      </div>
+    </header>
 
-    <h1>MODELO</h1>
-    <form action="index.html#model">
-      <label for="model">Marca:</label>
-      <input type="text" name="model" id="model" />
-      <label for="brand">Modelo:</label>
-      <select name="brand" id="brand">
-        <option value="peugeot">Peugeot</option>
-        <option value="chevrolet">Chevrolet</option>
-        <option value="ferrari">Ferrari</option>
-        <option value="fiat">Fiat</option>
-        <option value="porsche">Porsche</option>
-      </select>
-      <button type="submit">Cadastrar</button>
-    </form>
+    <main>
+      <div class="wrapper">
+        <form action="index.html#model">
+          <label for="model">Marca:</label>
+          <input type="text" name="model" id="model" />
+          <label for="brand">Modelo:</label>
+          <select name="brand" id="brand">
+            <option value="peugeot">Peugeot</option>
+            <option value="chevrolet">Chevrolet</option>
+            <option value="ferrari">Ferrari</option>
+            <option value="fiat">Fiat</option>
+            <option value="porsche">Porsche</option>
+          </select>
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
